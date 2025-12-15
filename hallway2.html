@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빛의 온도</title>
+  <meta name="description" content="복도에서 느껴지는 빛의 온도감.">
+  <meta name="keywords" content="따뜻한 복도, 차가운 복도, 어두운 복도">
+  <link rel="stylesheet" href="hallway2.css">
+</head>
+<body>
+    
+<header>
+    <h1><a href="hallway.html">빛의 온도</a></h1>
+    <p class="on-h">햇빛이 머물다 흘러가는 복도, 그 사이에서 스며드는 가벼운 숨결을 따라가는 공간.</p>
+</header>
+
+<section class="three-imgs">
+    
+    <div class="img0">
+        <p class="label">책</p>
+        <a href="hallway3.html" class="img-link">
+        <img src="img/2.0.jpg" alt="복도의 창문 넘어로 보이는 햇빛과 나무">
+        </a>
+    </div>
+
+    <div class="img1">
+        <p class="label">영화</p>
+        <a href="hallway3-2.html" class="img-link">
+        <img src="img/2.1.jpg" alt="멀리 보이는 우리문 사이로 들어오는 햇빛을 품은 복도 사진">
+        </a>
+    </div>
+
+    <div class="img2">
+        <p class="label">노래</p>
+        <a href="hallway3-3.html" class="img-link">
+        <img src="img/2.2.jpg" alt="복도로 햇빛이 들어와 전체적인 분위기가 따뜻한 복도 사진">
+        </a>
+    </div>
+
+</section>
+
+ <audio id="bgm" src="music/1.mp3" loop></audio>
+
+<script>
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.15;
+
+  document.addEventListener('click', () => {
+    bgm.play();
+  }, { once: true });
+</script>
+
+<footer>
+     © 2025. 김서연 모든 권리 보유.
+</footer>
+
+</body>
+</html>

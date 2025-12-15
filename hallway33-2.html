@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빛의 온도</title>
+  <link rel="stylesheet" href="hallway33.css">
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="hallway.html">빛의 온도</a></h1>
+    <p class="on-h"><a href="https://www.wavve.com/player/movie?movieid=MV_CD01_WR0000011164">〈콘슨탄틴〉 (프란시스 로렌스)</a></p>
+  </header>
+
+  <main>
+    <figure class="image-wrap">
+      <img src="img/33.1.jpg" alt="옆에 난간이 있는 차가운 분위기의 복도사진">
+      <figcaption>
+        <span>It’s not the house of God. It’s just a house.</span><br>
+        <span>여긴 신의 집이 아니야. 그냥 건물일 뿐이지.</span>
+      </figcaption>
+    </figure>
+  </main>
+
+  <audio id="bgm" src="music/2.mp3" loop></audio>
+
+<script>
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.15;
+
+  document.addEventListener('click', () => {
+    bgm.play();
+  }, { once: true });
+</script>
+
+  <footer>
+    © 2025. 김서연 모든 권리 보유.
+  </footer>
+
+</body>
+</html>

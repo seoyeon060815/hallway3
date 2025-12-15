@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빛의 온도</title>
+  <link rel="stylesheet" href="hallway33.css">
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="hallway.html">빛의 온도</a></h1>
+    <p class="on-h"><a href="https://www.youtube.com/watch?v=kKsivrgoyDw&list=RDkKsivrgoyDw&start_radio=1">〈Cool With You〉 - 뉴진스 </a></p>
+  </header>
+
+  <main>
+    <figure class="image-wrap">
+      <img src="img/33.2.jpg" alt="서랍과 흰벽이 보이는 차가운 분위기의 복도사진">
+      <figcaption>
+       이쯤에서 정말로 너는 어떤 결말로 가려 해
+      </figcaption>
+    </figure>
+  </main>
+
+  <audio id="bgm" src="music/2.mp3" loop></audio>
+
+<script>
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.15;
+
+  document.addEventListener('click', () => {
+    bgm.play();
+  }, { once: true });
+</script>
+
+  <footer>
+    © 2025. 김서연 모든 권리 보유.
+  </footer>
+
+</body>
+</html>

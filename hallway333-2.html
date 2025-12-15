@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빛의 온도</title>
+  <link rel="stylesheet" href="hallway333.css">
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="hallway.html">빛의 온도</a></h1>
+    <p class="on-h"><a href="https://www.wavve.com/player/movie?movieid=MV_CD01_WR0000011162">〈컨저링〉 (제임스 완)</a></p>
+  </header>
+
+  <main>
+    <figure class="image-wrap">
+      <img src="img/333.1.jpg" alt="불이 다 꺼진 복도에 멀리보이는 탈출구 사진">
+      <figcaption>
+        <span>Whatever is here, it’s not human.</span><br>
+        <span>여기 있는 건 인간이 아니에요.</span>
+      </figcaption>
+    </figure>
+  </main>
+
+<audio id="bgm" src="music/3.mp3" loop></audio>
+
+<script>
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.15;
+
+  document.addEventListener('click', () => {
+    bgm.play();
+  }, { once: true });
+</script>
+
+  <footer>
+    © 2025. 김서연 모든 권리 보유.
+  </footer>
+
+</body>
+</html>

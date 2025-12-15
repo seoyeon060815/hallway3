@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빛의 온도</title>
+  <link rel="stylesheet" href="hallway333.css">
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="hallway.html">빛의 온도</a></h1>
+    <p class="on-h"><a href="https://www.youtube.com/watch?v=BEYHJFIONvU&list=RDBEYHJFIONvU&start_radio=1">〈Tag, You’re It〉 - Melanie Martinez </a></p>
+  </header>
+
+  <main>
+    <figure class="image-wrap">
+      <img src="img/333.2.jpg" alt="붉은색과 초록색이 공존하고 있는 어두운 복도사진">
+      <figcaption>
+      <span>Can anybody hear me when I'm hidden underground?</span><br>
+      <span>내가 지하에 숨어 있으면 누가 내 말을 들을 수 있나요?</span>
+    </figcaption>
+    </figure>
+  </main>
+
+<audio id="bgm" src="music/3.mp3" loop></audio>
+
+<script>
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.15;
+
+  document.addEventListener('click', () => {
+    bgm.play();
+  }, { once: true });
+</script>
+
+  <footer>
+    © 2025. 김서연 모든 권리 보유.
+  </footer>
+
+</body>
+</html>

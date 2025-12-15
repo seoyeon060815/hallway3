@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>빛의 온도</title>
+  <link rel="stylesheet" href="hallway3.css">
+</head>
+
+<body>
+
+  <header>
+    <h1><a href="hallway.html">빛의 온도</a></h1>
+    <p class="on-h"><a href="https://product.kyobobook.co.kr/detail/S000202972044">「아몬드」 - 손원평 </a></p>
+  </header>
+
+  <main>
+    <figure class="image-wrap">
+      <img src="img/3.0.jpg" alt="복도의 창문 넘어로 보이는 햇빛과 나무">
+      <figcaption>
+        세상은 이해할 수 없고 두려운 일들로 가득 차 있지만 그래도 우리는 살아간다.
+      </figcaption>
+    </figure>
+  </main>
+
+<audio id="bgm" src="music/1.mp3" loop></audio>
+
+<script>
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.15;
+
+  document.addEventListener('click', () => {
+    bgm.play();
+  }, { once: true });
+</script>
+
+  <footer>
+    © 2025. 김서연 모든 권리 보유.
+  </footer>
+
+</body>
+</html>

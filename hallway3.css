@@ -71,13 +71,21 @@ main {
     position: relative;
 }
 
-.image-wrap {
+/* .image-wrap {
     margin: 0;
     padding: 0;
     width: 80%;
     max-width: 700px;
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+.image-wrap {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,21 +113,18 @@ main {
     left: 0;
     right: 0;
 } */
-
 figcaption {
     background-color: rgba(255, 255, 255, 0.7);
-    width: 100%;
-    padding: 1em 0; 
+    width: 90%;
+    padding: 1vw 0;      
     text-align: center;
-    font-size: 1em; 
+    font-size: 1.2vw;     
     color: #333333;
     line-height: 1.5;
     font-weight: 500;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
+    margin-top: -3vh;    
 }
+
 
 footer {
     background-color: #6E5A4A; 
@@ -149,6 +154,7 @@ footer {
         height: 40px;
     }
 }
+
 
 
 

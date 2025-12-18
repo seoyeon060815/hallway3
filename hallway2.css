@@ -1,10 +1,9 @@
 body {
     margin: 0;
     overflow-x: hidden;
-    /* 푸터를 위해 y축 스크롤은 열어두되, 평소엔 사진까지만 보이게 조절합니다 */
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
-    line-height: 1.7; 
+    line-height: 1.7;
 }
 
 header {
@@ -13,7 +12,7 @@ header {
 
 h1 {
     font-family: 'Libre Baskerville', serif;
-    font-weight: 700;        
+    font-weight: 700;
     letter-spacing: 0.005em;
     text-shadow: 0.25px 0 0 currentColor;
     margin: 0;
@@ -23,13 +22,13 @@ h1 {
 }
 
 h1 a {
-    color: inherit !important;
-    text-decoration: none !important;
+    color: inherit;
+    text-decoration: none;
 }
 
 .on-h {
-    background-color:#6E5A4A;
-    padding:30px 30px;
+    background-color: #6E5A4A;
+    padding: 30px;
     margin: 0;
     color: white;
 }
@@ -42,28 +41,21 @@ h1 a {
     line-height: 1.5;
 }
 
-/* --- 핵심 수정 부분 시작 --- */
-.three-imgs {  
+/* image list */
+.three-imgs {
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 20px 10px 40px; 
+    padding: 20px 10px 40px;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
-    
-    /* 화면 전체(100vh)에서 헤더 높이만큼 뺍니다. 
-       이렇게 하면 사진 영역 하단이 화면 바닥에 딱 붙습니다. */
-    height: calc(100vh - 120px); 
-    box-sizing: border-box;
 }
 
-.img0, .img1, .img2 {
-    /* 기존 너비 유지하면서 높이만 부모를 따라가게 합니다 */
+.img0,
+.img1,
+.img2 {
     width: calc(100% / 3 - 10px);
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
     box-sizing: border-box;
     background-color: #fff;
     color: #333;
@@ -72,36 +64,26 @@ h1 a {
     text-align: center;
 }
 
-.img-link {
-    flex: 1; /* 라벨 제외 나머지 공간을 사진이 다 채우게 합니다 */
-    position: relative;
-    display: block;
-    overflow: hidden;
-}
-
-.img-link img {
-    width: 100%;
-    height: 100%; /* 이미지가 박스에 꽉 차도록 */
-    object-fit: cover; /* 비율 유지하며 꽉 채움 */
-    display: block;
-    transition: filter 0.4s ease, transform 0.4s ease;
-}
-/* --- 핵심 수정 부분 끝 --- */
-
 .label {
     font-family: 'Libre Baskerville', serif;
-    font-weight: 700;        
     letter-spacing: 0.005em;
-    background-color:#4F4339;
+    background-color: #4F4339;
     color: white;
     font-size: 1.2em;
-    font-weight: normal;
     padding: 10px 0;
     margin: 0;
 }
 
+.img0 img,
+.img1 img,
+.img2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 footer {
-    background-color: #6E5A4A; 
+    background-color: #6E5A4A;
     color: white;
     text-align: right;
     font-size: 0.7em;
@@ -110,7 +92,37 @@ footer {
     box-sizing: border-box;
 }
 
-/* 호버 효과 (원래 코드 그대로) */
+@media (max-width: 600px) {
+    .three-imgs {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 10px 20px;
+    }
+
+    .img0,
+    .img1,
+    .img2 {
+        width: 100%;
+    }
+
+    .three-imgs img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.img-link {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.img-link img {
+    width: 100%;
+    display: block;
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
 .img-link::after {
     content: "";
     position: absolute;
@@ -127,17 +139,4 @@ footer {
 
 .img-link:hover::after {
     opacity: 1;
-}
-
-@media (max-width: 600px) {
-    .three-imgs {
-        height: auto; /* 모바일은 원래대로 스크롤 생기게 둠 */
-        flex-direction: column; 
-        gap: 15px; 
-        padding: 10px 10px 20px;
-    }
-
-    .img0, .img1, .img2 {
-        width: 100%;
-    }
 }

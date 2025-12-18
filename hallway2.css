@@ -69,12 +69,10 @@ h1 a {
   box-sizing: border-box;
 }
 
-/* 사진 설정 - 라벨과 너비를 맞추는 핵심 */
 .img0 img, .img1 img, .img2 img {
-  width: 100%;       /* 라벨과 똑같이 부모 너비 100% */
-  height: 65vh;      /* 세로 길이는 유지 */
-  /* ⭐ 핵심: contain 대신 cover를 써야 사진이 좌우 빈틈없이 꽉 찹니다 */
-  object-fit: cover; 
+  width: 100%;       /* 라벨과 동일하게 100% */
+  height: 65vh;      
+  object-fit: cover; /* ⭐ contain 대신 cover로 변경 (빈틈없이 채움) */
   display: block;
 }
 /* ===== Hover Effect ===== */
@@ -137,6 +135,7 @@ footer {
     height: auto;
   }
 }
+
 
 
 

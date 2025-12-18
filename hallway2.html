@@ -1,62 +1,60 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>빛의 온도</title>
   <meta name="description" content="복도에서 느껴지는 빛의 온도감.">
   <meta name="keywords" content="따뜻한 복도, 차가운 복도, 어두운 복도">
-
   <link rel="stylesheet" href="hallway22.css">
 </head>
-
 <body>
-  <header>
-    <h1>
-      <a href="index.html">빛의 온도</a>
-    </h1>
-    <p class="on-h">
-      형광등 아래 차가운 빛이 고여 있는 공간, 그 사이에 남은 공기가 낯선 정적을 데리고 서성인다.
-    </p>
-  </header>
+    
+<header>
+    <h1><a href="index.html">빛의 온도</a></h1>
+    <p class="on-h">햇빛이 머물다 흘러가는 복도, 그 사이에서 스며드는 가벼운 숨결을 따라가는 공간.</p>
+</header>
 
-  <section class="three-imgs">
+<section class="three-imgs">
+    
     <div class="img0">
-      <p class="label">책</p>
-      <a href="hallway33.html" class="img-link">
-        <img src="img/22.0.jpg" alt="분홍색 문이 있는 차가운 분위기의 복도사진">
-      </a>
+        <p class="label">책</p>
+        <a href="hallway33.html" class="img-link">
+        <img src="img/22.0.jpg" alt="멀리 보이는 우리문 사이로 들어오는 햇빛을 품은 복도 사진">
+        </a>
     </div>
 
     <div class="img1">
-      <p class="label">영화</p>
-      <a href="hallway33-2.html" class="img-link">
-        <img src="img/22.1.jpg" alt="옆에 난간이 있는 차가운 분위기의 복도사진">
-      </a>
+        <p class="label">영화</p>
+        <a href="hallway33-2.html" class="img-link">
+        <img src="img/22.1.jpg" alt="복도로 햇빛이 들어와 전체적인 분위기가 따뜻한 복도 사진">
+        </a>
     </div>
 
     <div class="img2">
-      <p class="label">노래</p>
-      <a href="hallway33-3.html" class="img-link">
+        <p class="label">노래</p>
+        <a href="hallway33-3.html" class="img-link">
         <img src="img/22.2.jpg" alt="서랍과 흰벽이 보이는 차가운 분위기의 복도사진">
-      </a>
+        </a>
     </div>
 
-    <audio id="bgm" src="music/2.mp3" loop></audio>
+ <audio id="bgm" src="music/1.mp3" loop></audio>
 
-    <script>
-      const bgm = document.getElementById('bgm');
-      bgm.volume = 0.15;
+<script>
+  const bgm = document.getElementById('bgm');
+  bgm.volume = 0.15;
 
-      document.addEventListener('click', () => {
-        bgm.play();
-      }, { once: true });
-    </script>
-  </section>
+  document.addEventListener('click', () => {
+    bgm.play();
+  }, { once: true });
+</script>
 
-  <footer>
-    © 2025. 김서연 모든 권리 보유.
-  </footer>
+</section>
+
+<footer>
+     © 2025. 김서연 모든 권리 보유.
+</footer>
+
 </body>
+
 </html>

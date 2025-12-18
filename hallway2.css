@@ -1,17 +1,12 @@
 body {
-   margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  overflow-x: hidden;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
   line-height: 1.7;
 }
 
 header {
-  flex: 0 0 auto;
   text-align: center;
 }
 
@@ -31,7 +26,6 @@ h1 a {
 }
 
 .on-h {
-  flex: 0 0 auto;
   background-color: #6E5A4A;
   padding: 20px;
   margin: 0;
@@ -39,29 +33,32 @@ h1 a {
 }
 
 .three-imgs {
-  flex: 1;
   display: flex;
   justify-content: center;
   gap: 18px;
-  padding: 20px;
+  padding: 16px 20px;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  align-items: stretch;
 }
 
 .img0, .img1, .img2 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 0;
 }
 
+.label {
+  background-color: #4F4339;
+  color: white;
+  font-size: 1em;          
+  padding: 6px 0;         
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
 .img-link {
-  flex: 1;
   position: relative;
   display: block;
   overflow: hidden;
@@ -69,20 +66,13 @@ h1 a {
 
 .img-link img {
   width: 100%;
-  height: 100%;
+  height: 42vh;          
   object-fit: cover;
   display: block;
   transition: filter 0.4s ease, transform 0.4s ease;
 }
 
-.label {
-  flex: 0 0 auto;
-  background-color: #4F4339;
-  color: white;
-  font-size: 1.1em;
-  padding: 8px 0;
-  text-align: center;
-}
+/* Hover */
 
 .img-link::after {
   content: "";
@@ -103,12 +93,11 @@ h1 a {
 }
 
 footer {
-  flex: 0 0 auto;
   background-color: #6E5A4A;
   color: white;
   text-align: right;
   font-size: 0.7em;
-  padding: 10px 20px;
+  padding: 8px 20px;
 }
 
 @media (max-width: 600px) {
@@ -146,3 +135,4 @@ footer {
     object-fit: cover;
   }
 }
+

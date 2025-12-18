@@ -4,6 +4,7 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
   line-height: 1.7;
+  word-break: keep-all;
 }
 
 header {
@@ -40,8 +41,7 @@ h1 a {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
-  min-height: calc(100vh - 260px);
-  align-items: stretch; 
+  align-items: stretch;
 }
 
 .img0, .img1, .img2 {
@@ -49,18 +49,15 @@ h1 a {
   max-width: calc(33.333% - 12px);
   display: flex;
   flex-direction: column;
-  padding: 0;
-  align-items: stretch; 
 }
 
 .label {
-  background-color: #2A3136;
+  background-color:#2A3136;
   color: white;
   font-size: 1.1em;
   padding: 8px 0;
   margin: 0;
   width: 100%;
-  display: block;
   text-align: center;
   box-sizing: border-box;
 }
@@ -68,23 +65,14 @@ h1 a {
 .img-link {
   position: relative;
   display: block;
-  width: 100%; 
   overflow: hidden;
-  flex: 1;
 }
 
 .img0 img, .img1 img, .img2 img {
-  width: 100%;      
-  height: 65vh;      
-  object-fit: cover; 
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
   display: block;
-  margin: 0;
-}
-
-.img-link {
-  position: relative;
-  display: block;
-  overflow: hidden;
 }
 
 .img-link img {
@@ -118,20 +106,21 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .three-imgs {
+
+   .three-imgs {
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
+    padding: 24px 20px 40px;
   }
 
-  .img0,
-  .img1,
-  .img2 {
-    width: 100%;
+  .img0, .img1, .img2 {
+    max-width: 100%;
   }
 
-  .img0 img,
-  .img1 img,
-  .img2 img {
+  .img0 img, .img1 img, .img2 img {
     height: auto;
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    object-fit: cover;
   }
 }

@@ -1,16 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 0;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
   font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 400;
   line-height: 1.7;
 }
 
 header {
   text-align: center;
-  flex: 0 0 auto;
 }
 
 h1 {
@@ -29,21 +31,16 @@ h1 a {
 }
 
 .on-h {
-  background-color: #6E5A4A;
-  padding: 20px;
-  margin: 0;
-  color: white;
+  display: none;
 }
 
 .three-imgs {
-  flex: 1;
   display: flex;
   gap: 18px;
-  padding: 16px 20px;
+  padding: 18px;
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
-  box-sizing: border-box;
+  height: calc(100vh - 110px);
 }
 
 .img0, .img1, .img2 {
@@ -55,8 +52,8 @@ h1 a {
 .label {
   background-color: #4F4339;
   color: white;
-  font-size: 1em;
-  padding: 6px 0;
+  font-size: 1.05em;
+  padding: 8px 0;
   margin: 0;
   text-align: center;
 }
@@ -79,7 +76,7 @@ h1 a {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.35);
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -96,11 +93,10 @@ h1 a {
 footer {
   background-color: #6E5A4A;
   color: white;
-  text-align: right;
   font-size: 0.7em;
-  padding: 8px 20px;
+  padding: 10px 20px;
+  text-align: right;
 }
-
 @media (max-width: 600px) {
   html, body {
     overflow-y: auto;
@@ -136,6 +132,7 @@ footer {
     object-fit: cover;
   }
 }
+
 
 
 

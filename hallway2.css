@@ -1,271 +1,138 @@
 body {
-    margin: 0;
-    overflow-x: hidden;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
 }
 
-/* header */
+/* ===== Header ===== */
+
 header {
-    text-align: center;
+  text-align: center;
 }
 
 h1 {
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 700;
-    letter-spacing: 0.005em;
-    text-shadow: 0.25px 0 0 currentColor;
-    margin: 0;
-    font-size: 24px;
-    padding: 12px 0;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  text-shadow: 0.25px 0 0 currentColor;
+  margin: 0;
+  font-size: 24px;
+  padding: 12px 0;
 }
 
 h1 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .on-h {
-    background-color: #6E5A4A;
-    padding: 30px;
-    margin: 0;
-    color: white;
+  background-color: #6E5A4A;
+  padding: 30px;
+  margin: 0;
+  color: white;
 }
 
-/* 이미지 영역 */
+/* ===== Image Section ===== */
+
 .three-imgs {
-    display: flex;
-    justify-content: center;
-    gap: 18px;                /* 🔥 사진 사이 간격 확실히 증가 */
-    padding: 20px 10px 40px;  /* 🔥 푸터랑 간격 그대로 */
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 18px;                 /* 사진 사이 간격 조금 증가 */
+  padding: 20px 20px 40px;   /* 푸터랑 간격 유지 */
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+
+  min-height: calc(100vh - 260px); /* 첫 화면 꽉 채움 */
 }
 
 .img0,
 .img1,
 .img2 {
-    width: calc(100% / 3 - 18px);
-    box-sizing: border-box;
-    text-align: center;
+  width: calc(100% / 3 - 12px);
+  text-align: center;
 }
 
-/* 라벨 */
+/* 책 / 영화 / 노래 라벨 */
 .label {
-    font-family: 'Libre Baskerville', serif;
-    letter-spacing: 0.005em;
-    background-color: #4F4339;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 0;
-    margin: 0;
+  background-color: #4F4339;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 0;
+  margin: 0;
+  width: 100%;              /* 사진 가로랑 정확히 맞춤 */
+  box-sizing: border-box;
 }
 
-/* 🔥 핵심: 사진 높이를 직접 줄임 */
+/* 사진 크기: 안 잘리고, 더 큼 */
 .img0 img,
 .img1 img,
 .img2 img {
-    width: 100%;
-    height: auto;
-    max-height: 320px;    /* ← 이 숫자 때문에 무조건 줄어듦 */
-    object-fit: contain; /* 절대 안 잘림 */
-    display: block;
+  width: 100%;
+  height: 65vh;             /* 핵심: 사진 길이만 줄여서 한 화면에 */
+  object-fit: contain;      /* 절대 안 잘림 */
+  display: block;
 }
 
-/* hover */
+/* ===== Hover Effect ===== */
+
 .img-link {
-    position: relative;
-    display: block;
-    overflow: hidden;
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 
 .img-link img {
-    transition: filter 0.4s ease, transform 0.4s ease;
+  transition: filter 0.4s ease, transform 0.4s ease;
 }
 
 .img-link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(255, 255, 255, 0.35);
-    opacity: 0;
-    transition: opacity 0.4s ease;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .img-link:hover img {
-    filter: blur(2px);
-    transform: scale(1.03);
+  filter: blur(2px);
+  transform: scale(1.03);
 }
 
 .img-link:hover::after {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* footer */
+/* ===== Footer ===== */
+
 footer {
-    background-color: #6E5A4A;
-    color: white;
-    text-align: right;
-    font-size: 0.7em;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
+  background-color: #6E5A4A;
+  color: white;
+  text-align: right;
+  font-size: 0.7em;
+  padding: 10px 20px;
 }
 
-/* 모바일 */
+/* ===== Mobile ===== */
+
 @media (max-width: 600px) {
-    .three-imgs {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px 10px 20px;
-    }
+  .three-imgs {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .img0,
-    .img1,
-    .img2 {
-        width: 100%;
-    }
-
-    .img0 img,
-    .img1 img,
-    .img2 img {
-        max-height: none;
-    }
-}body {
-    margin: 0;
-    overflow-x: hidden;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-}
-
-/* header */
-header {
-    text-align: center;
-}
-
-h1 {
-    font-family: 'Libre Baskerville', serif;
-    font-weight: 700;
-    letter-spacing: 0.005em;
-    text-shadow: 0.25px 0 0 currentColor;
-    margin: 0;
-    font-size: 24px;
-    padding: 12px 0;
-}
-
-h1 a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.on-h {
-    background-color: #6E5A4A;
-    padding: 30px;
-    margin: 0;
-    color: white;
-}
-
-/* 이미지 영역 */
-.three-imgs {
-    display: flex;
-    justify-content: center;
-    gap: 18px;                /* 🔥 사진 사이 간격 확실히 증가 */
-    padding: 20px 10px 40px;  /* 🔥 푸터랑 간격 그대로 */
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #fff;
-}
-
-.img0,
-.img1,
-.img2 {
-    width: calc(100% / 3 - 18px);
-    box-sizing: border-box;
-    text-align: center;
-}
-
-/* 라벨 */
-.label {
-    font-family: 'Libre Baskerville', serif;
-    letter-spacing: 0.005em;
-    background-color: #4F4339;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 0;
-    margin: 0;
-}
-
-/* 🔥 핵심: 사진 높이를 직접 줄임 */
-.img0 img,
-.img1 img,
-.img2 img {
+  .img0,
+  .img1,
+  .img2 {
     width: 100%;
+  }
+
+  .img0 img,
+  .img1 img,
+  .img2 img {
     height: auto;
-    max-height: 320px;    /* ← 이 숫자 때문에 무조건 줄어듦 */
-    object-fit: contain; /* 절대 안 잘림 */
-    display: block;
-}
-
-/* hover */
-.img-link {
-    position: relative;
-    display: block;
-    overflow: hidden;
-}
-
-.img-link img {
-    transition: filter 0.4s ease, transform 0.4s ease;
-}
-
-.img-link::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(255, 255, 255, 0.35);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.img-link:hover img {
-    filter: blur(2px);
-    transform: scale(1.03);
-}
-
-.img-link:hover::after {
-    opacity: 1;
-}
-
-/* footer */
-footer {
-    background-color: #6E5A4A;
-    color: white;
-    text-align: right;
-    font-size: 0.7em;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-/* 모바일 */
-@media (max-width: 600px) {
-    .three-imgs {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px 10px 20px;
-    }
-
-    .img0,
-    .img1,
-    .img2 {
-        width: 100%;
-    }
-
-    .img0 img,
-    .img1 img,
-    .img2 img {
-        max-height: none;
-    }
+  }
 }

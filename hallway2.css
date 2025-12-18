@@ -6,8 +6,6 @@ body {
   line-height: 1.7;
 }
 
-/* ===== Header ===== */
-
 header {
   text-align: center;
 }
@@ -34,8 +32,6 @@ h1 a {
   color: white;
 }
 
-/* ===== Image Section ===== */
-
 .three-imgs {
   display: flex;
   justify-content: center;
@@ -45,53 +41,45 @@ h1 a {
   margin: 0 auto;
   background-color: #fff;
   min-height: calc(100vh - 260px);
-  /* 추가: 자식 요소들이 가로를 꽉 채우도록 설정 */
   align-items: stretch; 
 }
 
 .img0, .img1, .img2 {
-  /* 수정: 계산 방식을 단순화하고 자식들이 꽉 차게 설정 */
   flex: 1;
   max-width: calc(33.333% - 12px);
   display: flex;
   flex-direction: column;
   padding: 0;
-  /* 중요: 라벨과 이미지가 정렬되도록 안쪽 정렬 강제 */
   align-items: stretch; 
 }
 
-/* 책 / 영화 / 노래 라벨 */
 .label {
   background-color: #4F4339;
   color: white;
   font-size: 1.1em;
   padding: 8px 0;
   margin: 0;
-  /* 수정: 너비를 100%로 강제하고 box-sizing 확인 */
   width: 100%;
   display: block;
   text-align: center;
   box-sizing: border-box;
 }
 
-/* 이미지 링크 컨테이너 */
 .img-link {
   position: relative;
   display: block;
-  width: 100%; /* 라벨과 똑같은 너비 강제 */
+  width: 100%; 
   overflow: hidden;
   flex: 1;
 }
 
 .img0 img, .img1 img, .img2 img {
-  width: 100%;       /* 라벨과 동일하게 100% */
+  width: 100%;      
   height: 65vh;      
-  /* cover를 써야 가로 빈틈 없이 라벨 끝까지 꽉 찹니다 */
   object-fit: cover; 
   display: block;
   margin: 0;
 }
-/* ===== Hover Effect ===== */
 
 .img-link {
   position: relative;
@@ -121,8 +109,6 @@ h1 a {
   opacity: 1;
 }
 
-/* ===== Footer ===== */
-
 footer {
   background-color: #6E5A4A;
   color: white;
@@ -130,8 +116,6 @@ footer {
   font-size: 0.7em;
   padding: 10px 20px;
 }
-
-/* ===== Mobile ===== */
 
 @media (max-width: 600px) {
   .three-imgs {
@@ -151,8 +135,6 @@ footer {
     height: auto;
   }
 }
-
-
 
 
 

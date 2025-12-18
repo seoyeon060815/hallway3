@@ -121,7 +121,7 @@ footer {
   .three-imgs {
     flex-direction: column; 
     gap: 0;                
-    padding: 20px 20px;   
+    padding: 30px 20px;    
     min-height: auto;      
   }
 
@@ -129,17 +129,17 @@ footer {
     width: 100%;           
     max-width: 100%;
     flex: none;
-    margin-bottom: 80px;   
+    margin-bottom: 120px;   
   }
 
   .img0 img, .img1 img, .img2 img {
-    height: 70vh;          
+    height: 55vh;          
     width: 100%;
     object-fit: cover;     
   }
 
   .label {
     font-size: 1.2em;      
-    padding: 12px 0;
+    padding: 10px 0;
   }
 }

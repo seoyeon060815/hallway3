@@ -117,29 +117,22 @@ footer {
   padding: 10px 20px;
 }
 
-@media (max-width: 600px) {
+@media@media (max-width: 600px) {
   .three-imgs {
     flex-direction: column; 
-    gap: 0;                
-    padding: 30px 20px;    
-    min-height: auto;      
+    gap: 20px;          
+    padding: 20px;
+    min-height: auto;
   }
 
   .img0, .img1, .img2 {
-    width: 100%;           
+    width: 100%;
     max-width: 100%;
     flex: none;
-    margin-bottom: 120px;   
   }
 
   .img0 img, .img1 img, .img2 img {
-    height: 55vh;          
-    width: 100%;
-    object-fit: cover;     
-  }
-
-  .label {
-    font-size: 1.2em;      
-    padding: 10px 0;
+    height: 55vh;      
   }
 }
+

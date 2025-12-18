@@ -39,13 +39,12 @@ h1 a {
 .three-imgs {
   display: flex;
   justify-content: center;
-  gap: 18px;                 /* 사진 사이 간격 조금 증가 */
-  padding: 20px 20px 40px;   /* 푸터랑 간격 유지 */
+  gap: 18px;
+  padding: 20px 20px 40px;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #fff;
-
-  min-height: calc(100vh - 260px); /* 첫 화면 꽉 채움 */
+  min-height: calc(100vh - 260px);
 }
 
 .img0,
@@ -55,28 +54,32 @@ h1 a {
   text-align: center;
 }
 
-/* 책 / 영화 / 노래 라벨 */
+/* 책 / 영화 / 노래 */
 .label {
   background-color: #4F4339;
   color: white;
   font-size: 1.1em;
-  padding: 12px 0;
   margin: 0;
-  width: 100%;              /* 사진 가로랑 정확히 맞춤 */
+  width: 100%;
   box-sizing: border-box;
+
+  aspect-ratio: 4 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 사진 크기: 안 잘리고, 더 큼 */
+/* 사진 */
 .img0 img,
 .img1 img,
 .img2 img {
   width: 100%;
-  height: 65vh;             /* 핵심: 사진 길이만 줄여서 한 화면에 */
-  object-fit: contain;      /* 절대 안 잘림 */
+  height: 65vh;
+  object-fit: contain;
   display: block;
 }
 
-/* ===== Hover Effect ===== */
+/* ===== Hover ===== */
 
 .img-link {
   position: relative;

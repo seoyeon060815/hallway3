@@ -1,15 +1,23 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
-    line-height: 1.7
-    height: 100%;
+    line-height: 1.7;
     word-break: keep-all;
 }
 
+/* ===== Header ===== */
 header {
     text-align: center;
+    flex-shrink: 0; /* 헤더 크기 유지 */
 }
 
 h1 {
@@ -29,10 +37,8 @@ h1 a {
 
 .on-h {
     font-family: 'Libre Baskerville', serif;
-    font-weight: 700;        
-    letter-spacing: 0.005em;
     background-color: #6E5A4A;
-    padding:30px 30px;
+    padding: 30px;
     margin: 0;
     color: white;
     font-size: 18px;
@@ -40,104 +46,65 @@ h1 a {
 }
 
 .on-h a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  transition: color 0.3s ease;
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
-.on-h a:hover {
-  color: blue;
-}
-
-
-header::after {
-    content: '';
-    display: block;
-    height: 10px;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
+/* ===== Main (정중앙 정렬 핵심) ===== */
 main {
-    flex-grow: 1; 
-    width: 100%;
+    flex: 1;            /* 헤더와 푸터 사이의 모든 남은 공간 차지 */
     display: flex;
-    justify-content: center;
-    align-items: flex-start; 
-    padding-top: 20px; 
-    position: relative; 
-    padding-bottom: 30px; 
-    position: relative;
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* ⭐ 세로 중앙: 위아래 간격을 똑같이 맞춤 */
+    padding: 20px 0;
+    box-sizing: border-box;
 }
 
 .image-wrap {
     position: relative;
-    width: 80%;
+    width: 90%;
     max-width: 700px;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .image-wrap img {
     width: 100%;
-    height: auto;
-    display: block;
-    max-height: 500px; 
+    max-height: 65vh;   /* 화면 높이에 맞춰 사진 크기 자동 조절 */
     object-fit: contain;
+    display: block;
 }
 
+/* 이미지 위에 겹쳐지는 캡션 */
 figcaption {
     background-color: rgba(255, 255, 255, 0.7);
     width: 100%;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
     font-size: 16px;
     color: #333333;
-    line-height: 1.5;
     font-weight: 500;
     position: absolute;
-    bottom: 20px;
+    bottom: 0;          /* 사진 바로 위 하단에 위치 */
     left: 0;
-    right: 0;
     box-sizing: border-box;
 }
 
+/* ===== Footer ===== */
 footer {
+    flex-shrink: 0;
     background-color: #6E5A4A; 
     color: white;
     text-align: right;
     font-size: 0.7em;
     padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-        max-height: 100%;
-    }
-    
-    .author, figcaption {
-        font-size: 14px;
-    }
-}*/
-
+/* 모바일 대응 */
 @media (max-width: 600px) {
-    .on-img {
-        height: 75vh;
-    }
-
-    figcaption {
-        font-size: 12px;  
-        padding: 6px 0;   
-        bottom: 15px;     
-    }
-
-
-    .three-imgs img {
-        width: 60px;
-        height: 40px;
-    }
+    .on-h { padding: 20px; font-size: 16px; }
+    figcaption { font-size: 14px; padding: 10px 0; }
+    .image-wrap { width: 95%; }
 }
-

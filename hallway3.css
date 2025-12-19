@@ -104,8 +104,8 @@ footer {
     }
 
     .on-h {
-        padding: 12px;
-        font-size: 15px;
+        padding: 10px;
+        font-size: 14px;
     }
 
     main {
@@ -115,24 +115,23 @@ footer {
     .image-wrap {
         width: 100%;
         max-width: none;
-        padding: 0 15px;
+        padding: 0; 
     }
 
     .image-wrap img {
-        max-height: 58vh; 
+        height: 68vh;    
+        max-height: 70vh; 
         object-fit: cover;
     }
 
     figcaption {
-        font-size: 13px;
-        padding: 6px 10px;
-        font-weight: 400; 
+        font-size: 12px;
+        padding: 5px 10px;
         line-height: 1.4;
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255, 255, 255, 0.6); 
     }
 
     footer {
-        padding: 8px 20px;
+        padding: 6px 20px;
     }
 }
-

@@ -57,7 +57,7 @@ h1 a {
 
 .img0 img, .img1 img, .img2 img {
   width: 100%;
-  height: calc(100vh - 298px); 
+  height: calc(100vh - 297px); 
   object-fit: cover;
   display: block;
 }
@@ -124,3 +124,4 @@ footer {
     object-fit: cover;
   }
 }
+

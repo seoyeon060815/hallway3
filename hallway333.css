@@ -98,7 +98,40 @@ footer {
 
 
 @media (max-width: 600px) {
-    .on-h { padding: 20px; font-size: 16px; }
-    figcaption { font-size: 14px; padding: 10px 0; }
-    .image-wrap { width: 95%; }
+    body {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    .on-h {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .image-wrap {
+        width: 100%;
+        max-width: none;
+        padding: 0 15px;
+    }
+
+    .image-wrap img {
+        max-height: 58vh; 
+        object-fit: cover;
+    }
+
+    figcaption {
+        font-size: 13px;
+        padding: 6px 10px;
+        font-weight: 400; 
+        line-height: 1.4;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    footer {
+        padding: 8px 20px;
+    }
 }

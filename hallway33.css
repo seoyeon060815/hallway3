@@ -94,7 +94,8 @@ footer {
     text-align: right;
     font-size: 0.7em;
     padding: 10px 20px;
-    margin-top: auto;   
+    margin-top: auto; 
+}
 
 
 @media (max-width: 600px) {
@@ -135,3 +136,4 @@ footer {
         padding: 8px 20px;
     }
 }
+
